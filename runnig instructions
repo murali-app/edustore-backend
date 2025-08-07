@@ -1,0 +1,20 @@
+cd edustore-backend
+
+npm init -y                # If package.json is not valid
+npm install                # Install dependencies (after adding them)
+
+
+npm install express prisma @prisma/client
+npm install -D typescript ts-node-dev @types/node @types/express
+
+npx tsc --init
+
+
+
+DATABASE_URL="postgresql://postgres:postgres@localhost:5432/edustore"
+JWT_SECRET="your_super_secret_key"
+
+npx prisma init
+npx prisma generate
+
+
